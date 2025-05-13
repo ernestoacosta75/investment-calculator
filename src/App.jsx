@@ -1,5 +1,7 @@
 import Header from "@features/Header/Header"
-import UserInput from "@features/UserInput/UserInput";
+import UserInput from "@features/UserInput/UserInput.jsx";
+import Results from "@features/Results/Results.jsx";
+import { useState } from "react";
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -13,7 +15,7 @@ function App() {
       setUserInput(prevUserInput => {
           return {
               ...prevUserInput,
-              [inputIdentifier]: newValue
+              [inputIdentifier]: +newValue
           }
       });
   };
